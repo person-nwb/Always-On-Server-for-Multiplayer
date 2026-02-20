@@ -784,6 +784,7 @@ namespace Always_On_Server
                     }
 
                 }
+                // Game1.player.timeWentToBed.Value is 0 when host is awake (see GameLocation.cs line 11347 to 11362)
                 else if (numPlayers <= 0 && Game1.timeOfDay >= 610 && Game1.timeOfDay <= 2500 && Game1.player.timeWentToBed.Value == 0 && currentDate != eggFestival && currentDate != flowerDance && currentDate != luau && currentDate != danceOfJellies && currentDate != stardewValleyFair && currentDate != spiritsEve && currentDate != festivalOfIce && currentDate != feastOfWinterStar)
                 {
                     Game1.netWorldState.Value.IsPaused = true;
